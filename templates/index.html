@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov 19 23:18:27 2022
+
+@author: HP
+"""
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API </title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <div class="login">
+     <h1> Predict SUV Buy </h1>
+     
+     <form action="{{url_for('predict')}}" method='post'>
+         <input type="text" name="Gender" placeholder="Gender" required="required" />
+         <input type="text" name="Age" placeholder="Age" required="required" />
+         <input type="text" name="EstimatedSalary" placeholder="EstimatedSalary" required="required" />
+         
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict </button>
+     </form>
+     
+     <br>
+     <br>
+     
+     {{prediction_text}}
+     
+ </div>
+ 
+</body>
+</html>
+ 
